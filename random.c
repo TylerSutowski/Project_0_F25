@@ -7,10 +7,9 @@
 
 char* rand_string(char *s, size_t size) {
     srand( (unsigned)time(NULL) );
-    char random_char;
     size_t i;
     for (i = 0; i < size; i++) {
-      random_char = rand();
+      char random_char = rand();
       s[i] = random_char;
     }
     return(s);
