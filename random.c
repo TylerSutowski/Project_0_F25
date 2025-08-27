@@ -5,12 +5,11 @@
 #include <stdlib.h>
 #include <time.h>
 
-char* rand_string(char *s, size_t size) {
-    srand( (unsigned)time(NULL) );
-    size_t i;
-    for (i = 0; i < size; i++) {
-      char random_char = rand();
-      s[i] = random_char;
+char* rand_string(char *s, size_t size) {   //take string and size
+    srand( (unsigned)time(NULL));
+    for (size_t i = 0; i < size; i++) {     //iterate and put a random char in s[i]
+      char rand_char = rand();
+      s[i] = rand_char;
     }
-    return(s);
+    return(s);                              //return s
   }
